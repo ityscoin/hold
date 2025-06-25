@@ -1,0 +1,235 @@
+:root {
+    --main-spans-movement-margin: 100%;
+}
+
+body {
+    font-family: MedievalSharp,
+        serif;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-background {
+    width: 200%;
+    z-index: -100;
+    position: absolute;
+    left: -50%;
+    top: 120px;
+    opacity: 0.2;
+    animation: rotateImg 13s linear infinite;
+}
+
+/* .gif-img {
+    z-index: -100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+} */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 150px;
+    align-content: center;
+}
+
+header h1 {
+    font-size: 30pt;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes rotateImg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btc {
+    height: 1em;
+    vertical-align: middle;
+    animation: rotateImg 1s linear infinite;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 
+@keyframes move1 {
+    0% {
+        margin-left: - var(--main-spans-movement-margin);
+    }
+
+    50% {
+        margin-left: var(--main-spans-movement-margin);
+    }
+
+    100% {
+        margin-left: - var(--main-spans-movement-margin);
+    }
+} */
+
+/* 
+.sub-texts-container {
+    width: 100vw;
+} */
+
+main .sub-text-1 {
+    font-size: 10pt;
+}
+
+main .sub-text-2 {
+    /* animation: move2 5s linear infinite;
+    position: relative; */
+}
+
+main .sub-text-1,
+.sub-text-2 {
+    white-space: nowrap;
+}
+
+.main-span {
+    font-size: 70pt;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+footer div.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-bottom: 6px;
+}
+
+footer .ca-container {
+    border-top: 2px solid white;
+    background-color: black;
+    padding: 10px;
+}
+
+footer .ca-container .copy-address {
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 5px;
+    /* border: 1px solid white; */
+    transition: all 0.15s;
+}
+
+footer .ca-container .copy-address:hover {
+    color: black;
+    background-color: white;
+}
+
+footer a,
+footer button {
+    background-color: black;
+    padding: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    transform-origin: bottom;
+}
+
+footer a,
+footer button,
+footer a svg,
+footer a img,
+footer button svg {
+    transition: all 0.3s;
+}
+
+
+footer a:hover,
+footer button:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+
+footer a:hover svg,
+footer a:hover img,
+footer button:hover svg {
+    color: black;
+    fill: black;
+}
+
+
+footer a svg,
+footer button svg {
+    color: white;
+}
+
+
+footer a img {}
+
+.ca-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .ca-container button {
+    padding: 8px;
+}
+
+.ca-container button svg {}
+
+.ca-container span {}
+
+footer .copied {
+    position: fixed;
+    color: black;
+    background-color: white;
+    right: 15px;
+    font-family: tahoma;
+    font-size: 9pt;
+    padding: 7px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.copied-animation {
+    animation: copied-animation normal 1s;
+}
+
+@keyframes copied-animation {
+    from {
+        opacity: 0;
+        bottom: 10px;
+    }
+
+    30% {
+        opacity: 1;
+        bottom: 15px;
+    }
+}
