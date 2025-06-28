@@ -197,6 +197,10 @@ footer a img {}
     align-items: center;
     gap: 10px;
 }
+.ca-container .copy-address {
+    width: 300px;
+    white-space: wrap;
+}
 
 footer .ca-container button {
     padding: 8px;
